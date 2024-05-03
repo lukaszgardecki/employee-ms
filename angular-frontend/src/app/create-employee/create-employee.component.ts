@@ -19,9 +19,7 @@ export class CreateEmployeeComponent {
   }
 
   saveEmployee() {
-    this.employeeService.createEmployee(this.employee).subscribe(emp => {
-
-    });
+    this.employeeService.createEmployee(this.employee).subscribe();
   }
 
   goToEmployeeList() {
