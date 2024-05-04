@@ -15,11 +15,12 @@ export class CreateEmployeeComponent {
 
   onSubmit() {
     this.saveEmployee();
-    this.goToEmployeeList();
   }
 
   saveEmployee() {
-    this.employeeService.createEmployee(this.employee).subscribe();
+    this.employeeService.createEmployee(this.employee).subscribe(data => {
+      this.goToEmployeeList();
+    });
   }
 
   goToEmployeeList() {
